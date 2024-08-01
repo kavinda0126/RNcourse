@@ -28,9 +28,11 @@ export default function App() {
       </View>
       <View style={styles.goallistContainer}>
         {goalList.map((goal) => (
-          <Text style={styles.goalItem} key={goal}>
+          <View style={styles.goalItem}  key={goal}>
+          <Text style={styles.viewText} >
             {goal}
           </Text>
+          </View>
         ))}
       </View>
     </View>
@@ -72,4 +74,7 @@ const styles = StyleSheet.create({
     borderColor: "blue",
     color: "white",
   },
+  viewText:{
+    color: "white",
+  }
 });
